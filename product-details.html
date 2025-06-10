@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="company_name"></title>
+    <!-- Logo tap -->
+    <link rel="icon" href="assets/image/LOGO.png">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- Animation AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Boot Strap CSS File -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="webPage">
+        <header>
+            <nav class="navbar navbar-expand-lg lang-dir position-fixed w-100">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="assets/image/LOGO-2.png" class="rounded-2" width="45px" alt="قمتي">
+                            <span data-translate="company_name" class="text_brand com_name"></span>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler shadow shadow-none border-0 fs-1 nav_toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul id="navbarNav" class="navbar-nav mb-2 mb-lg-0 lang-dir ms-auto gap-3 p-2 mt-3 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link nav_link" href="index.html" data-translate="home"></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav_link" href="#" id="aboutDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-translate="about_us"></a>
+                                <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                    <li><a class="dropdown-item lang-dir" href="about.html#whoAreYou"
+                                            data-translate="about1"></a></li>
+                                    <li><a class="dropdown-item lang-dir" href="about.html#vision"
+                                            data-translate="about2"></a></li>
+                                    <li><a class="dropdown-item lang-dir" href="about.html#features"
+                                            data-translate="about3"></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav_link active" href="#" id="doorsDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-translate="doors"></a>
+                                <ul class="dropdown-menu" aria-labelledby="doorsDropdown">
+                                    <li><a class="dropdown-item lang-dir" href="products.html?type=armored_doors"
+                                            data-translate="armored_doors"></a>
+                                    </li>
+                                    <li><a class="dropdown-item lang-dir" href="products.html?type=interior_doors"
+                                            data-translate="interior_doors"></a>
+                                    </li>
+                                    <li><a class="dropdown-item lang-dir" href="products.html?type=pivotal_doors"
+                                            data-translate="pivotal_doors"></a>
+                                    </li>
+                                    <li><a class="dropdown-item lang-dir" href="products.html?type=hidden_doors"
+                                            data-translate="hidden_doors"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav_link" href="products.html?type=stands"
+                                    data-translate="stands"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav_link" href="assets/image/profile.pdf" target="_blank"
+                                    data-translate="catalog"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav_link" href="contact.html" data-translate="contact"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="lang-toggle">
+                                    <img id="language-flag" class="lang-flag" width="30px" src="" alt="flag">
+                                    <span class="translat" data-translate="language_switch"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container my-5" id="product-details-container"></div>
+            <div class="related my-5">
+                <h3 class="mb-4 text-center" data-translate="related_products">منتجات من نفس النوع</h3>
+                <div class="swiper related-swiper">
+                    <div class="swiper-wrapper" id="related-wrapper"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+
+            <div class="not_related my-5">
+                <h3 class="mb-4 text-center" data-translate="other_products">منتجات من أنواع أخرى</h3>
+                <div class="swiper not-related-swiper">
+                    <div class="swiper-wrapper" id="not-related-wrapper"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-light text-center text-lg-start pt-5 pb-2">
+            <div class="container text-center">
+                <h2 class="fw-bold text_footer com_name text-uppercase" data-translate="text_footer"></h2>
+                <p class="footer_p" data-translate="footer_p">يدفعنا الشغف بالتفاصيل وحب اتقان العمل إلى الجد والمثابرة
+                    لنحقق أكثر مـما يـحب أن يراه العميل من جمال و جودة وخدمة</p>
+                <div class="d-flex justify-content-center gap-4 mt-3 mb-3 flex-wrap fw-bold">
+                    <div>
+                        <i class="bi bi-envelope-fill"></i>
+                        <a href="mailto:sales@qimmati.net" class="text-dark text-decoration-none">sales@qimmati.net</a>
+                    </div>
+                    <div>
+                        <i class="bi bi-telephone-fill"></i> 0555067275
+                    </div>
+                    <div>
+                        <i class="bi bi-phone-fill"></i> 0553777425
+                    </div>
+                    <div>
+                        <i class="bi bi-whatsapp"></i> 0555067275
+                    </div>
+                </div>
+
+                <div class="linkss d-flex justify-content-center flex-wrap gap-4 mt-3 mb-4 small text-muted lang-dir">
+                    <a href="about.html" data-translate="about_us" class="text-dark text-decoration-none">من نحن</a>
+                    <a href="#product" data-translate="produc" class="text-dark text-decoration-none">منتجاتنا</a>
+                    <a href="assets/image/profile.pdf" data-translate="catalog" target="_blank"
+                        class="text-dark text-decoration-none">كتالوج مجموعة ابواب
+                        إليت</a>
+                    <a href="contact.html" data-translate="contact" class="text-dark text-decoration-none">تواصل
+                        معنا</a>
+
+                </div>
+
+                <div class="media d-flex justify-content-center gap-4">
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+
+                <div class="footer_bottom d-flex justify-content-center align-items-center gap-3 mb-3 flex-wrap">
+                    <div class="w-75 ms-auto me-auto">
+                        <hr>
+                    </div>
+                    <div class="lang-dir footerss">
+                        <div class="all_saved d-flex justify-content-center align-items-center gap-3 flex-wrap">
+                            <p class="mb-0 small text-muted" style="font-size: 18px;" data-translate="all_saved">
+                                جميع الحقوق محفوظة &copy; 2025 شركة أركان الأعمال
+                            </p>
+                        </div>
+                        <div class="num_trusted d-flex gap-4 flex-column flex-lg-row">
+                            <div class="num d-flex align-items-center gap-3 lang-dir">
+                                <img src="assets/image/tax.webp" alt="tax">
+                                <div class="text text-start">
+                                    <h3 class="fs-6 text-black text-opacity-50" data-translate="tax_num">الرقم الضريبي
+                                    </h3>
+                                    <span class="fs-6 fw-bold text-black">311998262100003</span>
+                                </div>
+                            </div>
+                            <div class="trusted d-flex align-items-center gap-3 lang-dir">
+                                <img src="assets/image/sbc.webp" alt="sbc">
+                                <div class="text text-start">
+                                    <h3 class="fs-6 text-black text-opacity-50" data-translate="text_sbc_1">موثوق لدى
+                                    </h3>
+                                    <span class="fs-6 fw-bold text-black" data-translate="text_sbc_2">منصة
+                                        الأعمال</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/68a405ef08.js" crossorigin="anonymous"></script>
+    <!-- Animation AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Boot Strap JS File -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- File main Js -->
+    <script src="assets/js/product.js"></script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = Number(urlParams.get('id'));
+        const productType = urlParams.get('type'); // ← نأخذ النوع من الرابط
+
+        const displayLang = localStorage.getItem('lang') || 'en';
+        const container = document.getElementById("product-details-container");
+
+        // نحصل على نوع الباب المطلوب من البيانات
+        const productList = products.doors.find(door => door.type === productType)?.items || [];
+        const product = productList[productId];
+
+        if (product) {
+            const title = displayLang === 'ar' ? product.name_ar : product.name_en;
+            const description = displayLang === 'ar' ? product.specs_ar : product.specs_en;
+
+            container.innerHTML = `
+            <div class="row">
+                <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center pt-5 pb-5">
+                    <img class="w-75 h-100 rounded-5" src="${product.image}" alt="${product.alt}" />
+                </div>
+                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center pt-5 pb-5 lang-dir text-item">
+                    <h2>${title}</h2>
+                    <p>${description}</p>
+                    <a href="contact.html" class="btn_contact" data-translate="contactus">Contact Us</a>
+                </div>
+            </div>
+        `;
+        } else {
+            container.innerHTML = `<p>Product not found</p>`;
+        }
+
+
+
+        function createSlide(product, index, type) {
+            const lang = displayLang === 'ar' ? 'ar' : 'en';
+            const title = lang === 'ar' ? product.name_ar : product.name_en;
+
+            return `
+        <div class="swiper-slide text-center p-2">
+            <div class="card h-100">
+                <img src="${product.image}" class="card-img-top" alt="${title}">
+                <div class="card-body">
+                    <h5 class="card-title">${title}</h5>
+                    <a href="product-details.html?id=${index}&type=${type}" class="btn btn-primary" data-translate="details">تفاصيل</a>
+                </div>
+            </div>
+        </div>
+    `;
+        }
+
+        // عرض المنتجات المرتبطة وغير المرتبطة
+        function renderSliders() {
+            const relatedWrapper = document.getElementById('related-wrapper');
+            const notRelatedWrapper = document.getElementById('not-related-wrapper');
+
+            const allDoors = products.doors;
+
+            // المنتجات المرتبطة (نفس النوع)
+            const relatedItems = productList.filter((_, i) => i !== productId); // نستثني المنتج الحالي
+            relatedItems.forEach((prod, idx) => {
+                relatedWrapper.innerHTML += createSlide(prod, idx, productType);
+            });
+
+            // المنتجات غير المرتبطة (من أنواع أخرى)
+            allDoors
+                .filter(door => door.type !== productType)
+                .forEach(door => {
+                    door.items.forEach((prod, idx) => {
+                        notRelatedWrapper.innerHTML += createSlide(prod, idx, door.type);
+                    });
+                });
+
+            // تهيئة السلايدرز
+            new Swiper(".related-swiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: ".related-swiper .swiper-button-next",
+                    prevEl: ".related-swiper .swiper-button-prev",
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    992: { slidesPerView: 3 },
+                    1200: { slidesPerView: 4 }
+                }
+            });
+
+            new Swiper(".not-related-swiper", {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: ".not-related-swiper .swiper-button-next",
+                    prevEl: ".not-related-swiper .swiper-button-prev",
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2 },
+                    992: { slidesPerView: 3 },
+                    1200: { slidesPerView: 4 }
+                }
+            });
+        }
+
+        renderSliders();
+
+    </script>
+
+
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

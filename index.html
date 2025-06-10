@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="company_name"></title>
+    <!-- Logo tap -->
+    <link rel="icon" href="assets/image/LOGO.png">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- Animation AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Boot Strap CSS File -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="webPage">
+        <header>
+            <nav class="navbar navbar-expand-lg lang-dir position-fixed w-100">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <div class="d-flex align-items-center gap-1">
+                            <img src="assets/image/LOGO-2.png" class="rounded-2" width="45px" alt="قمتي">
+                            <span data-translate="company_name" class="text_brand com_name"></span>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler shadow shadow-none border-0 fs-1 nav_toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul id="navbarNav" class="navbar-nav mb-2 mb-lg-0 lang-dir ms-auto gap-3 p-2 mt-3 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link nav_link active" href="index.html" data-translate="home"></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav_link" href="#" id="aboutDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-translate="about_us"></a>
+                                <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                    <li><a class="dropdown-item lang-dir" href="about.html#whoAreYou"
+                                            data-translate="about1"></a></li>
+                                    <li><a class="dropdown-item lang-dir" href="about.html#vision"
+                                            data-translate="about2"></a></li>
+                                    <li><a class="dropdown-item lang-dir" href="about.html#features"
+                                            data-translate="about3"></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav_link" href="#" id="doorsDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-translate="doors"></a>
+                                <ul class="dropdown-menu" aria-labelledby="doorsDropdown">
+                                    <li><a class="dropdown-item lang-dir" href="products.html?type=armored_doors" data-translate="armored_doors"></a>
+                                    </li>
+                                    <li><a class="dropdown-item lang-dir" href="products.html?type=interior_doors" data-translate="interior_doors"></a>
+                                    </li>
+                                    <li><a class="dropdown-item lang-dir" href="products.html?type=pivotal_doors" data-translate="pivotal_doors"></a>
+                                    </li>
+                                    <li><a class="dropdown-item lang-dir" href="products.html?type=hidden_doors" data-translate="hidden_doors"></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav_link" href="products.html?type=stands" data-translate="stands"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav_link" href="assets/image/profile.pdf" target="_blank"
+                                    data-translate="catalog"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav_link" href="contact.html" data-translate="contact"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="lang-toggle">
+                                    <img id="language-flag" class="lang-flag" width="30px" src="" alt="flag">
+                                    <span class="translat" data-translate="language_switch"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="hero-slider">
+                    <div class="slide active" style="background-image: url('assets/image/slide\ \(2\).png');">
+                        <div class="content w-100">
+                            <h1 data-translate="company_name" class="com_name"></h1>
+                            <p class="mb-4" data-translate="text_sec_1"></p>
+                            <a href="#" data-translate="offer"></a>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('assets/image/slide (1).png');">
+                        <div class="content w-100">
+                            <h1 data-translate="company_name" class="com_name"></h1>
+                            <p class="mb-4" data-translate="text_sec_2"></p>
+                            <a href="#" data-translate="offer"></a>
+                        </div>
+                    </div>
+
+                    <div class="dots">
+                        <div class="dot active" onclick="showSlide(0)"></div>
+                        <div class="dot" onclick="showSlide(1)"></div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <main>
+
+            <section class="icon_contact">
+                <div class="floating-social-icons" id="floatingIcons">
+                    <a href="#" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link bg-white">
+                        <span data-translate="offer"></span>
+                        <img src="assets/image/icon2.svg" width="40px" alt="offer"></a>
+                </div>
+            </section>
+
+            <section class="about section lang-dir" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 pt-5">
+                            <div class="main_section">
+                                <h2 data-translate="who_are">Who Are We ?</h2>
+                                <img class="shape mb-2" src="assets/image/bottom_border.png" alt="bottom_border">
+                            </div>
+                            <p data-translate="about_p_1">
+                                <span><b class="com_name"></b></span> is a specialized Saudi brand headquartered in
+                                Riyadh,
+                                dedicated to offering modern products in external aluminum cladding doors that
+                                seamlessly
+                                combine elegance with high performance, along with related building facades.
+                            </p>
+                            <p data-translate="about_p_2" class="sec_p_about">
+                                <span>We always start by deeply understanding the needs of our clients' environment, and
+                                    we
+                                    work passionately to fulfill them. </span> We believe that a successful and
+                                exceptional
+                                customer experience is the strongest bridge to trust — built through the excellence of
+                                the
+                                product itself, along with outstanding pre- and post-sale services. This is our top
+                                priority.
+                            </p>
+                            <a href="about.html" data-translate="read">Read More</a>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="gallery-slider d-flex justify-content-center">
+                                <div class="g-slide rounded-5 active"
+                                    style="background-image: url('assets/image/about_main_1.jpg');"></div>
+                                <div class="g-slide rounded-5"
+                                    style="background-image: url('assets/image/about_main_1.webp');"></div>
+                                <div class="g-slide rounded-5"
+                                    style="background-image: url('assets/image/about_main_3.jpg');"></div>
+                                <div class="g-slide rounded-5"
+                                    style="background-image: url('assets/image/about_main_4.png');"></div>
+                                <div class="g-slide rounded-5"
+                                    style="background-image: url('assets/image/about_main_5.png');"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section product" id="product">
+                <div class="container d-flex flex-column align-items-center">
+                    <div class="text_main_about">
+                        <h2 class="text-center" data-translate="product">Our Products</h2>
+                        <img class="shape mb-2" src="assets/image/bottom_border.png" alt="bottom_border">
+                    </div>
+                    <p data-translate="sec_text_product">
+                        Built to last — with performance beyond expectations.
+                    </p>
+                    <div class="nav_tabs p-2 ps-4 pe-4">
+                        <ul class="d-flex gap-4 align-items-center">
+                            <li class="tab-btn active" data-target="doors" data-translate="doors">Doors</li>
+                            <li class="tab-btn" data-target="stands" data-translate="stands">Stands</li>
+                        </ul>
+                    </div>
+                    <div class="allProduct w-100">
+                        <div class="products-content">
+                            <div id="doors"
+                                class="tab-content flex-column justify-content-center align-items-center active">
+                                <div
+                                    class="content_doors mb-5 d-flex flex-column justify-content-center align-items-center mt-3">
+                                    <h3 data-translate="armored_doors"></h3>
+                                    <div class="row armored_doors armored-doors-container"></div>
+                                    <br>
+                                    <div>
+                                        <a href="products.html?type=armored_doors" data-translate="btn_product" class="btn_product">More Product</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="content_doors mb-5 d-flex flex-column justify-content-center align-items-center mt-3">
+                                    <h3 data-translate="interior_doors"></h3>
+                                    <div class="row interior_doors"></div>
+                                    <br>
+                                    <a href="products.html?type=interior_doors" data-translate="btn_product" class="btn_product">More Product</a>
+                                </div>
+                                <div
+                                    class="content_doors mb-5 d-flex flex-column justify-content-center align-items-center mt-3">
+                                    <h3 data-translate="pivotal_doors"></h3>
+                                    <div class="row pivotal_doors"></div>
+                                    <br>
+                                    <a href="products.html?type=pivotal_doors" data-translate="btn_product" class="btn_product">More Product</a>
+                                </div>
+                                <div
+                                    class="content_doors mb-3 d-flex flex-column justify-content-center align-items-center mt-3">
+                                    <h3 data-translate="hidden_doors"></h3>
+                                    <div class="row hidden_doors"></div>
+                                    <br>
+                                    <a href="products.html?type=hidden_doors" data-translate="btn_product" class="btn_product">More Product</a>
+                                </div>
+                            </div>
+                            <div id="stands" class="tab-content flex-column justify-content-center align-items-center">
+                                <h3 data-translate="stands_section_text">Stands</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="why section bg-white pt-5 pb-5">
+                <div class="container pt-5 pb-5">
+                    <div class="row lang-dir">
+                        <div class="col-12 col-lg-6 image_why">
+                            <img src="assets/image/why_image.png" class="w-100 rounded-5" alt="أركان الأعمال">
+                        </div>
+                        <div class="col-12 col-lg-6 why_text pt-4">
+                            <div class="main_section">
+                                <h2 data-translate="text_main_why">
+                                    Why Choose us?
+                                </h2>
+                                <img class="shape mb-2" src="assets/image/bottom_border.png" alt="bottom_border">
+                            </div>
+                            <p data-translate="text_prim_why">
+                                With over 40 years of accumulated experience in the aluminum industry, our team has
+                                gained
+                                deep knowledge and advanced techniques in this field. We also possess more than 4 years
+                                of
+                                specialized expertise in the manufacturing of high-quality exterior aluminum cladding
+                                doors.
+                            </p>
+                            <p data-translate="text_sec_why">
+                                Over the years, our operations have expanded and our expertise in door manufacturing and
+                                architectural facades has grown significantly. We have proudly contributed to prominent
+                                projects across Saudi Arabia and the Gulf region, playing a key role in urban
+                                development.
+                                With our substantial capabilities, we are actively implementing strategic expansion
+                                plans to
+                                strengthen the leadership of <b>"Business Pillars"</b> in the aluminum industry—where
+                                our
+                                work is now considered a benchmark for quality and excellence in the Saudi market.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section successful position-relative pt-5 pb-5">
+                <img src="assets/image/bg-successful.jpg" class="position-absolute top-0 w-100 h-100"
+                    alt="أركان الأعمال">
+                <div class="container w-100 h-100 pt-3 pb-3">
+                    <div class="w-50 text_successful pe-5 lang-dir">
+                        <p class="text-white mb-4" data-translate="successful_pri"></p>
+                        <p class="text-white mb-4" data-translate="successful_sec"></p>
+                        <p class="text-white" data-translate="successful_thr"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="success_partners section">
+                <div class="container">
+                    <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+                        <div class="main_section">
+                            <h2 data-translate="partners_tit">
+                                PARTNERS IN SUCCESS
+                            </h2>
+                            <img class="shape mt-2 mb-2 w-100" src="assets/image/bottom_border.png" alt="bottom_border">
+                        </div>
+                        <p class="text-center" data-translate="partners_p"></p>
+                    </div>
+                    <div class="slide_partners">
+                        <div class="swiper partnersSwiper mt-4">
+                            <div class="swiper-wrapper mt-3">
+                                <!-- استبدل src بالصور الحقيقية لشركائك -->
+                                <div class="swiper-slide"><img src="assets/image/partners/logo-1.jpg" alt="Partner 1"
+                                        class="img-fluid" /></div>
+                                <div class="swiper-slide"><img src="assets/image/partners/logo-2.png" alt="Partner 2"
+                                        class="img-fluid" /></div>
+                                <div class="swiper-slide"><img src="assets/image/partners/logo-3.jpg" alt="Partner 3"
+                                        class="img-fluid" /></div>
+                                <div class="swiper-slide"><img src="assets/image/partners/logo-4.png" alt="Partner 4"
+                                        class="img-fluid" /></div>
+                                <div class="swiper-slide"><img src="assets/image/partners/logo-5.png" alt="Partner 5"
+                                        class="img-fluid" /></div>
+                                <div class="swiper-slide"><img src="assets/image/partners/logo-6.png" alt="Partner 6"
+                                        class="img-fluid" /></div>
+                                <div class="swiper-slide"><img src="assets/image/partners/logo-7.png" alt="Partner 7"
+                                        class="img-fluid" /></div>
+                                <div class="swiper-slide"><img src="assets/image/partners/logo-8.png" alt="Partner 8"
+                                        class="img-fluid" /></div>
+                                <div class="swiper-slide"><img src="assets/image/partners/logo-9.png" alt="Partner 9"
+                                        class="img-fluid" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-light text-center text-lg-start pt-5 pb-2">
+            <div class="container text-center">
+                <h2 class="fw-bold text_footer com_name text-uppercase" data-translate="text_footer"></h2>
+                <p class="footer_p" data-translate="footer_p">يدفعنا الشغف بالتفاصيل وحب اتقان العمل إلى الجد والمثابرة
+                    لنحقق أكثر مـما يـحب أن يراه العميل من جمال و جودة وخدمة</p>
+                <div class="d-flex justify-content-center gap-4 mt-3 mb-3 flex-wrap fw-bold">
+                    <div>
+                        <i class="bi bi-envelope-fill"></i>
+                        <a href="mailto:sales@qimmati.net"
+                            class="text-dark text-decoration-none">sales@qimmati.net</a>
+                    </div>
+                    <div>
+                        <i class="bi bi-telephone-fill"></i> 0555067275
+                    </div>
+                    <div>
+                        <i class="bi bi-phone-fill"></i> 0553777425
+                    </div>
+                    <div>
+                        <i class="bi bi-whatsapp"></i> 0555067275
+                    </div>
+                </div>
+
+                <div class="linkss d-flex justify-content-center flex-wrap gap-4 mt-3 mb-4 small text-muted lang-dir">
+                    <a href="about.html" data-translate="about_us" class="text-dark text-decoration-none">من نحن</a>
+                    <a href="#product" data-translate="produc" class="text-dark text-decoration-none">منتجاتنا</a>
+                    <a href="assets/image/profile.pdf" data-translate="catalog" target="_blank"
+                        class="text-dark text-decoration-none">كتالوج مجموعة ابواب
+                        إليت</a>
+                    <a href="contact.html" data-translate="contact" class="text-dark text-decoration-none">تواصل
+                        معنا</a>
+
+                </div>
+
+                <div class="media d-flex justify-content-center gap-4">
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+
+                <div class="footer_bottom d-flex justify-content-center align-items-center gap-3 mb-3 flex-wrap">
+                    <div class="w-75 ms-auto me-auto">
+                        <hr>
+                    </div>
+                    <div class="lang-dir footerss">
+                        <div class="all_saved d-flex justify-content-center align-items-center gap-3 flex-wrap">
+                            <p class="mb-0 small text-muted" style="font-size: 18px;" data-translate="all_saved">
+                                جميع الحقوق محفوظة &copy; 2025 شركة أركان الأعمال
+                            </p>
+                        </div>
+                        <div class="num_trusted d-flex gap-4 flex-column flex-lg-row">
+                            <div class="num d-flex align-items-center gap-3 lang-dir">
+                                <img src="assets/image/tax.webp" alt="tax">
+                                <div class="text text-start">
+                                    <h3 class="fs-6 text-black text-opacity-50" data-translate="tax_num">الرقم الضريبي
+                                    </h3>
+                                    <span class="fs-6 fw-bold text-black">311998262100003</span>
+                                </div>
+                            </div>
+                            <div class="trusted d-flex align-items-center gap-3 lang-dir">
+                                <img src="assets/image/sbc.webp" alt="sbc">
+                                <div class="text text-start">
+                                    <h3 class="fs-6 text-black text-opacity-50" data-translate="text_sbc_1">موثوق لدى
+                                    </h3>
+                                    <span class="fs-6 fw-bold text-black" data-translate="text_sbc_2">منصة
+                                        الأعمال</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/68a405ef08.js" crossorigin="anonymous"></script>
+    <!-- Animation AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Boot Strap JS File -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- File main Js -->
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
